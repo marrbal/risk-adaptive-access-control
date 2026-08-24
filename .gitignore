@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Trained model artifacts (large, regenerable, not portable pickle files)
+*.pkl
+model.pkl
+transformer.pkl
+
+# Raw pre-injection log (regenerable from src/data_generator.py, superseded
+# by data/logs_with_anomalies.jsonl which is the one everything else reads)
+logs.jsonl
+logs.csv
+schema.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Word lock files
+~$*.docx

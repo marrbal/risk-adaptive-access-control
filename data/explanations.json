@@ -1,0 +1,242 @@
+[
+  {
+    "event_label": "E1 \u2013 TP (bulk_data_exfiltration)",
+    "event_id": "evt-010335",
+    "user_id": "IT-003",
+    "department": "IT Security",
+    "resource_id": "RES-013",
+    "sensitivity": "Confidential",
+    "network_zone": "corporate",
+    "action": "export",
+    "bytes_transferred": 10000000,
+    "anomaly_type": "bulk_data_exfiltration",
+    "ground_truth": "anomalous",
+    "prediction": "flagged",
+    "risk_score": 100,
+    "anomaly_proba": 1.0,
+    "top_features": [
+      {
+        "feature": "bytes_log_zscore",
+        "shap_value": 0.3572,
+        "feature_val": 2.6078,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "action_is_export",
+        "shap_value": 0.1067,
+        "feature_val": 1.0,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "hour_of_day_norm",
+        "shap_value": 0.0612,
+        "feature_val": 0.087,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "failure_count_24h",
+        "shap_value": -0.0447,
+        "feature_val": 2.0,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "sensitivity_level",
+        "shap_value": 0.0445,
+        "feature_val": 2.0,
+        "direction": "\u2191 risk"
+      }
+    ]
+  },
+  {
+    "event_label": "E2 \u2013 TP (impossible_travel)",
+    "event_id": "evt-010230",
+    "user_id": "CA-008",
+    "department": "Clinical",
+    "resource_id": "RES-001",
+    "sensitivity": "Privileged",
+    "network_zone": "external",
+    "action": "write",
+    "bytes_transferred": 4974,
+    "anomaly_type": "impossible_travel",
+    "ground_truth": "anomalous",
+    "prediction": "flagged",
+    "risk_score": 85,
+    "anomaly_proba": 0.8526,
+    "top_features": [
+      {
+        "feature": "is_external",
+        "shap_value": 0.2861,
+        "feature_val": 1.0,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "external_privileged",
+        "shap_value": 0.1161,
+        "feature_val": 1.0,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "bytes_log_zscore",
+        "shap_value": -0.047,
+        "feature_val": 0.0452,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "peer_resource_rarity",
+        "shap_value": -0.0456,
+        "feature_val": 0.7728,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "device_trust_unknown",
+        "shap_value": -0.0298,
+        "feature_val": 0.0,
+        "direction": "\u2193 risk"
+      }
+    ]
+  },
+  {
+    "event_label": "E3 \u2013 TP (first_seen_device)",
+    "event_id": "evt-010355",
+    "user_id": "IT-003",
+    "department": "IT Security",
+    "resource_id": "RES-014",
+    "sensitivity": "Confidential",
+    "network_zone": "corporate",
+    "action": "read",
+    "bytes_transferred": 7234,
+    "anomaly_type": "first_seen_device_sensitive",
+    "ground_truth": "anomalous",
+    "prediction": "flagged",
+    "risk_score": 100,
+    "anomaly_proba": 1.0,
+    "top_features": [
+      {
+        "feature": "is_first_seen_device",
+        "shap_value": 0.3073,
+        "feature_val": 1.0,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "device_trust_unknown",
+        "shap_value": 0.2658,
+        "feature_val": 1.0,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "peer_resource_rarity",
+        "shap_value": -0.064,
+        "feature_val": 0.8484,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "sensitivity_level",
+        "shap_value": 0.0576,
+        "feature_val": 2.0,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "bytes_log_zscore",
+        "shap_value": -0.0348,
+        "feature_val": 0.2854,
+        "direction": "\u2193 risk"
+      }
+    ]
+  },
+  {
+    "event_label": "E4 \u2013 FP (normal, wrongly flagged)",
+    "event_id": "evt-009910",
+    "user_id": "FIN-006",
+    "department": "Finance",
+    "resource_id": "RES-022",
+    "sensitivity": "Internal",
+    "network_zone": "external",
+    "action": "read",
+    "bytes_transferred": 4781,
+    "anomaly_type": null,
+    "ground_truth": "normal",
+    "prediction": "flagged",
+    "risk_score": 75,
+    "anomaly_proba": 0.7478,
+    "top_features": [
+      {
+        "feature": "is_external",
+        "shap_value": 0.3923,
+        "feature_val": 1.0,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "peer_resource_rarity",
+        "shap_value": -0.084,
+        "feature_val": 0.8896,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "bytes_log_zscore",
+        "shap_value": -0.0471,
+        "feature_val": -0.0473,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "sensitivity_level",
+        "shap_value": -0.023,
+        "feature_val": 1.0,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "is_vpn",
+        "shap_value": 0.0185,
+        "feature_val": 0.0,
+        "direction": "\u2191 risk"
+      }
+    ]
+  },
+  {
+    "event_label": "E5 \u2013 FN (anomaly, narrowly missed)",
+    "event_id": "evt-011144",
+    "user_id": "HR-004",
+    "department": "HR",
+    "resource_id": "RES-026",
+    "sensitivity": "Public",
+    "network_zone": "external",
+    "action": "read",
+    "bytes_transferred": 10080,
+    "anomaly_type": "impossible_travel",
+    "ground_truth": "anomalous",
+    "prediction": "allowed",
+    "risk_score": 42,
+    "anomaly_proba": 0.4226,
+    "top_features": [
+      {
+        "feature": "is_external",
+        "shap_value": 0.3699,
+        "feature_val": 1.0,
+        "direction": "\u2191 risk"
+      },
+      {
+        "feature": "bytes_log_zscore",
+        "shap_value": -0.0849,
+        "feature_val": 0.5341,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "sensitivity_level",
+        "shap_value": -0.0425,
+        "feature_val": 0.0,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "mfa_not_used",
+        "shap_value": -0.0207,
+        "feature_val": 0.0,
+        "direction": "\u2193 risk"
+      },
+      {
+        "feature": "device_trust_unknown",
+        "shap_value": -0.0185,
+        "feature_val": 0.0,
+        "direction": "\u2193 risk"
+      }
+    ]
+  }
+]
