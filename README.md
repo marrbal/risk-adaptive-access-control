@@ -6,9 +6,6 @@ enterprise ("TechnoMed Solutions"). Every access event gets a continuous
 risk score (0–100) that is mapped to **allow / challenge / block**, with
 sensitivity-aware thresholds and step-up authentication.
 
-This started as a postgraduate assignment (MSc Cybersecurity & AI
-Technologies, University of Piraeus) — the full write-up, with methodology,
-results and discussion, is in [`docs/RAAC_Assignment_Report.docx`](docs/RAAC_Assignment_Report.docx).
 
 All data is synthetic. No real individuals or organisations are represented.
 
@@ -65,7 +62,6 @@ point at `../data/`.
 ├── src/            pipeline scripts (steps 1–7 above)
 ├── data/           output artifacts already committed, so results can be
 │                   inspected without re-running the pipeline
-├── docs/           the full assignment report
 ├── requirements.txt
 └── README.md
 ```
@@ -91,8 +87,3 @@ Python 3.10+.
 pip install -r requirements.txt
 ```
 
-## License
-
-MIT — see [LICENSE](LICENSE). Swap this out if your university's academic
-integrity policy prefers something more restrictive (e.g. all-rights-reserved)
-for coursework you might resubmit or extend later.
