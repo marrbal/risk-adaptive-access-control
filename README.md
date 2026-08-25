@@ -6,8 +6,9 @@ enterprise ("TechnoMed Solutions"). Every access event gets a continuous
 risk score (0–100) that is mapped to **allow / challenge / block**, with
 sensitivity-aware thresholds and step-up authentication.
 
-
-All data is synthetic. No real individuals or organisations are represented.
+Built as a postgraduate assignment (MSc Cybersecurity & AI Technologies,
+University of Piraeus). All secrets, product data, and the brand itself are
+fictional/synthetic.
 
 ## Results at a glance
 
@@ -65,11 +66,6 @@ point at `../data/`.
 ├── requirements.txt
 └── README.md
 ```
-
-`data/` does **not** include `logs.jsonl` (the pre-anomaly-injection log) or
-the trained `model.pkl` / `transformer.pkl` — these are large, fully
-regenerable from the seeded scripts, and pickle files aren't something you
-should distribute/trust blindly anyway. See `.gitignore`.
 
 ## Reproducibility
 
